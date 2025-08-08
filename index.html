@@ -25,7 +25,7 @@
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 800px;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -58,13 +58,6 @@
             margin: 0; /* Remove default paragraph margin */
         }
 
-        .public-access-buttons {
-            display: flex;
-            flex-direction: column; /* Stack buttons vertically */
-            gap: 15px; /* Spacing between buttons */
-            margin-bottom: 20px; /* Space below buttons before info boxes */
-        }
-
         .info-box {
             background: #fdf2f8; /* Softer pink background */
             border-left: 5px solid #d9468c; /* Pink/Mauve border */
@@ -77,7 +70,6 @@
         }
 
         .btn {
-            width: 100%;
             padding: 12px;
             background: linear-gradient(135deg, #d9468c 0%, #a855f7 100%); /* Pink/Mauve gradient */
             color: white;
@@ -86,7 +78,6 @@
             font-size: 16px;
             cursor: pointer;
             transition: transform 0.2s;
-            margin-bottom: 10px;
             text-decoration: none !important; /* NEW: Remove underline */
             text-align: center; /* NEW: Center text */
         }
@@ -98,8 +89,6 @@
         .btn-secondary {
             background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); /* Light pink for secondary */
             color: #9d2362;
-            text-decoration: none !important; /* NEW: Remove underline */
-            text-align: center; /* NEW: Center text */
         }
 
         .section {
@@ -107,21 +96,21 @@
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
         }
 
-        /* Public Mental Health Test Selection Screen */
-        .public-test-selection {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
+        /* Public-specific container */
+        .public-flyer-container {
             padding: 40px;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            min-height: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 20px;
+            min-height: auto;
+            background: #fceef5;
+        }
+
+        .public-flyer-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
         }
 
         @media (max-width: 768px) {
@@ -131,12 +120,10 @@
             }
              .section {
                 padding: 15px;
-                border-radius: 10px;
-            }
-             .public-access-buttons .btn {
-                padding: 12px;
-                font-size: 1em;
-            }
+             }
+             .public-flyer-buttons {
+                flex-direction: column;
+             }
         }
     </style>
 </head>
@@ -146,10 +133,10 @@
         <p>True beauty is finally at the tip of your fingers!</p>
     </div>
     
-    <div class="container" style="max-width: 800px; margin: 40px auto; padding: 0; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);">
-      <div class="public-test-selection" style="padding: 40px; border-radius: 20px; min-height: auto; background: #fceef5;">
+    <div class="container" style="max-width: 800px;">
+      <div class="public-flyer-container">
         
-        <section id="laser-hair-removal-info" class="section" style="background: transparent; text-align: left; box-shadow: none;">
+        <section class="section" style="background: transparent; text-align: left; box-shadow: none; padding-bottom: 0;">
             <h2 style="text-align: center; color: #864d6f;">Advanced Laser Hair Removal</h2>
             
             <div style="display: flex; justify-content: center; gap: 30px; margin: 20px 0; color: #d9468c;">
@@ -182,13 +169,13 @@
         </section>
 
         <footer style="margin-top: 30px; text-align: center;">
-            <div class="public-access-buttons" style="flex-direction: row; justify-content: center; gap: 20px;">
+            <div class="public-flyer-buttons">
                 <a href="https://summitaestheticsmd.com/" target="_blank" rel="noopener noreferrer" class="btn" style="width: auto; padding: 15px 30px;">
                     Visit Summit Aesthetics Site
                 </a>
-                <button class="btn btn-secondary" style="width: auto; padding: 15px 30px;">
+                <a href="flyer/discounts" class="btn btn-secondary" style="width: auto; padding: 15px 30px;">
                     View Coupons & Discounts
-                </button>
+                </a>
             </div>
         </footer>
       </div>
